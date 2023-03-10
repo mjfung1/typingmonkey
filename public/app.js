@@ -5,7 +5,7 @@ const typingText = document.querySelector(".typing-text p"),
     mistakeTag = document.querySelector(".mistakes span"),
     wpmTag = document.querySelector(".wpm span"),
     cpmTag = document.querySelector(".cpm span");
-  
+    username = document.querySelector(".welcome span");
 let audio = new Audio("keyboard-sound.mp3");
 
 let timer,
@@ -88,6 +88,7 @@ async function resetGame() {
             wpm: wpmTag.innerText, 
             mistake: mistakeTag.innerText, 
             cpm: cpmTag.innerText,
+            name: username.innerText
         })
     });
 
