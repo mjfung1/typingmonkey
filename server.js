@@ -5,13 +5,14 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const fns = require('date-fns');
 const app = express();
+require("dotenv").config();
 
 
 const User = require("./model/user");
 
 
 mongoose
-    .connect("mongodb://localhost:27017/typingMonkey")
+    .connect(process.env.MONGO_URI)
     .then(() => console.log("Connected to mongo database"))
     .catch((err) => console.log("Error connecting to DB"));
 

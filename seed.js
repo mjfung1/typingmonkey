@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 const User = require("./model/user");
+require("dotenv").config();
 
 mongoose
-    .connect("mongodb://localhost:27017/typingMonkey")
+    .connect(process.env.MONGO_URI)
     .then(() => console.log("Connected to mongo database"))
     .catch((err) => console.log("Error connecting to DB"));
 
