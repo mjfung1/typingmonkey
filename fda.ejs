@@ -1,0 +1,20 @@
+  <table class="table table-sm table-dark w-50">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="pl-5" scope="col">Leaderboard</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <% for (let i = 0; i < 4; i++) { %> <% const user = users[i] %>
+      <tr>
+        <th scope="row" class="pl-5 pr-4"><%= user.name %></th>
+        <td class="pl-5"><%= user.wpm %>WPM</td>
+        <td class="pl-5"><small><%= user.createdAt %></small></td>
+      </tr>
+
+      <% } %>
+
+    </tbody>
+  </table>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>typemonkey | A clone of monkeytype</title>
+    <link rel="icon" type="image/png" href="/images/monkey-32x32.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark w-100">
+      <a class="navbar-brand" href="#">
+        <img
+          src="/images/monkey-512x512.png"
+          width="30"
+          height="30"
+          class="d-inline-block align-top"
+          alt="logo"
+        />
+        typemonkey</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/mjfung1"
+              ><i class="devicon-github-original"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="https://www.linkedin.com/in/miguel-fung-5084691b5/"
+              ><i class="devicon-linkedin-plain"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://mjfung1.github.io/">Portfolio</a>
+          </li>
+        </ul>
+        <div class="welcome">
+          Hi, <%= user %>
+        </div>
+      </div>
+    </nav>
+ 
+        
+        <div class="stats">
+          <ul class="stats-details">
+         
+            <li class="mistakes">
+              <p>Mistakes: </p>
+              <span>0</span>
+            </li>
+            <li class="wpm">
+              <p>WPM: </p>
+              <span>0</span>
+            </li>
+            <li class="cpm">
+              <p>CPM: </p>
+              <span>0</span>
+            </li>
+          </ul>
+        </div>
+ 
+
+    <div class="wrapper">
+      <input type="text" class="input-field" />
+      <div class="content-box">
+        <p class="time"></p>
+        <div class="typing-text">
+          <p></p>
+        </div>
+        <div class="content">
+          <ul class="result-details">
+          
+        
+            <li class="mistakes">
+              <p>Mistakes:</p>
+              <span>0</span>
+            </li>
+            <li class="wpm">
+              <p>WPM:</p>
+              <span>0</span>
+            </li>
+            <li class="cpm">
+              <p>CPM:</p>
+              <span>0</span>
+            </li>
+          </ul>
+
+          <button class="tryAgainBtn"><i class="fa-solid fa-arrow-rotate-right replay-button fa-lg"></i></button>
+        </div>
+      </div>
+        <table class="table table-sm table-dark w-50 leaderboard">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="pl-5" scope="col"><h4 class="stats-title">leaderboard</h4></th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <% for (let i = 0; i < 4; i++) { %> <% const user = users[i] %>
+      <tr>
+        <th scope="row" class="pl-5 pr-4"><%= user.name %></th>
+        <td class="pl-5"><span class="leader-wpm"><%= user.wpm %></span> WPM</td>
+        <td class="pl-5 created-at"><%= user.createdAt %></td>
+      </tr>
+
+      <% } %>
+
+    </tbody>
+  </table>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/paragraph.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
