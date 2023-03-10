@@ -60,6 +60,7 @@ app.post("/game", async (req, res) => {
     if ( wpm > 5 && cpm > 5) {
         const user = new User(req.body);
         user.name = req.cookies.name;
+        console.log(user)
         await user.save();
     }
 
