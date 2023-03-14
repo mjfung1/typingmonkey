@@ -112,3 +112,7 @@ function typingSound() {
 loadParagraph();
 inpField.addEventListener("input", initTyping);
 tryAgainBtn.addEventListener("click", resetGame);
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
