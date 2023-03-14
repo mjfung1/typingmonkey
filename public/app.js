@@ -79,7 +79,7 @@ function initTimer() {
 
 async function resetGame() {
     // console.log({wpm: wpmTag.innerText, mistake: mistakeTag.innerText, cpm: cpmTag.innerText})
-    await fetch("https://typingmonkey.onrender.com//game", {
+    await fetch("https://typingmonkey.onrender.com/game", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
