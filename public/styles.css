@@ -282,11 +282,13 @@ li:not(:first-child) span {
 
 .replay-button:hover {
     color: white;
+    transition: all 0.35s ease-in-out;
 }
 
 
 .replay-button:active {
     color: var(--yellow);
+    transition: all 0.35s ease-in-out;
 }
 
 .leaderboard {
