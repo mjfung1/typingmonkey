@@ -280,6 +280,15 @@ li:not(:first-child) span {
     position: absolute;
 }
 
+.replay-button:hover {
+    color: white;
+}
+
+
+.replay-button:active {
+    color: var(--yellow);
+}
+
 .leaderboard {
     margin: 60px auto;
     text-align: center;

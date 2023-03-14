@@ -69,4 +69,4 @@ app.post("/game", async (req, res) => {
 })
 
 
-app.listen(3000, () => console.log("listening of port 3000"));
+app.listen(3001, () => console.log("listening of port 3000"));
